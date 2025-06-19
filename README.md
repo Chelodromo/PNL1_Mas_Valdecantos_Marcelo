@@ -4,7 +4,7 @@
 📚 Este repositorio contiene el desarrollo de los **trabajos prácticos** realizados en el marco de la materia **Procesamiento de Lenguaje Natural (PLN)**, correspondiente a la **Especialización en Inteligencia Artificial** de la **Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA)**.
 
 👤 **Autor:** Marcelo Adrián Más Valdecantos  
-📘 **Código de alumno:** co1811  
+📘 **Código de alumno:** a1811  
 
 ---
 
