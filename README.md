@@ -53,13 +53,6 @@ La materia **Procesamiento de Lenguaje Natural (PLN)** aborda técnicas, modelos
 
 ---
 
-## 📄 Licencia
-
-Este repositorio tiene fines estrictamente educativos y de aprendizaje.  
-© Marcelo Adrián Más Valdecantos – 2025
-
-
-
 ---
 
 ## ▶️ Cómo utilizar este repositorio
@@ -69,7 +62,7 @@ Este repositorio tiene fines estrictamente educativos y de aprendizaje.
 3. Ejecutar las celdas secuencialmente para reproducir los resultados.
 4. Revisar los comentarios y outputs en cada notebook para seguir el flujo de análisis.
 
-> 💡 Es recomendable crear un entorno virtual e instalar las dependencias necesarias con `pip install -r requirements.txt` si aplica.
+> Es recomendable crear un entorno virtual e instalar las dependencias necesarias con `pip install -r requirements.txt` si aplica.
 
 ---
 
