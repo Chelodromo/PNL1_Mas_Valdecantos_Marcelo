@@ -1,7 +1,7 @@
 
-# Procesamiento de Lenguaje Natural – Trabajos Prácticos
+# Procesamiento de Lenguaje Natural.
 
-Este repositorio contiene el desarrollo de los **trabajos prácticos** realizados en el marco de la materia **Procesamiento de Lenguaje Natural (PLN)**, correspondiente a la **Especialización en Inteligencia Artificial** de la **Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA)**.
+Este repositorio contiene el desarrollo de los **Desafíos** realizados en el marco de la materia **Procesamiento de Lenguaje Natural (PLN)**, correspondiente a la **Especialización en Inteligencia Artificial** de la **Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA)**.
 
 👤 **Autor:** Marcelo Adrián Más Valdecantos  
 📘 **Código de alumno:** a1811  
