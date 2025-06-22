@@ -11,12 +11,18 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 ## Contenido del repositorio
 
 ### 1️ Desafío 1 – Vectorización y Clasificación de Textos
-> **Tema:** Dataset *20 Newsgroups*, vectorización con **TF-IDF**, clasificación con **Naïve Bayes** y análisis de similaridad entre documentos.  
-> 📈 Se explora el impacto de distintas representaciones vectoriales sobre el rendimiento del modelo.
+> **Tema:** Dataset *20 Newsgroups*, vectorización con **TF-IDF**, clasificación con **Naïve Bayes** y análisis de similaridad entre documentos.
+> Vectorizamos con **TF-IDF** todo el corpus porque ayuda a destacar palabras que son importantes en un documento pero no comunes en todos, luego elegimos al azar 5 documentos.
+> Implementamos el concepto de "cosine similarity", que mide qué tan similares son dos vectores en términos de su ángulo para encontrar los 5 documentos  mas similares.
+> Exploramos:
+>             - Distintos modelos de **Naïve Bayes**: MultinomialNB(Bueno para textos en general) y ComplementNB(Mejor en                          conjuntos desbalanceados), cada uno con diferentes valores del parámetro alpha.
+>             - Distintas configuraciones del vectorizador TfidfVectorizer: con variaciones en ngram_range, min_df y                           stop_words.
+>             - Para encontrar la mejor combinación capta mejor el contenido del texto.
+> Finalmente Se explora el impacto de distintas representaciones vectoriales sobre el rendimiento del modelo.
 
 ### 2️ Desafío 2 – Clasificación de Sentimientos
 > **Tema:** Análisis de sentimientos en reseñas de películas.  
-> 🔍 Se implementan estrategias de limpieza, tokenización y vectorización para entrenar modelos supervisados que distinguen polaridad positiva/negativa.
+> Se implementan estrategias de limpieza, tokenización y vectorización para entrenar modelos supervisados que distinguen polaridad positiva/negativa.
 
 ### 3️ Desafío 3 – Clasificación de Texto Multiclase
 > **Tema:** Construcción de modelos para clasificación multiclase.  
