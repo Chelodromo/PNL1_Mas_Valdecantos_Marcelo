@@ -68,9 +68,47 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 --- 
 
 
-### 3️ Desafío 3 – Clasificación de Texto Multiclase
-> **Tema:** Construcción de modelos para clasificación multiclase.  
->  Incluye selección de corpus, ingeniería de características, entrenamiento, evaluación y optimización de modelos.
+### Desafío 3 – Modelo de Lenguaje a Nivel de Caracteres con RNN
+
+> **Tema:** Construcción y entrenamiento de un modelo de lenguaje basado en caracteres utilizando redes recurrentes. Se entrena el modelo sobre un corpus literario y se evalúa su capacidad para generar texto, considerando estrategias de generación y el uso de la perplejidad como métrica de validación.
+
+#### Preparación del corpus
+
+> - Se utilizó nuevamente el texto del *Martín Fierro*, cargado y preprocesado como una única secuencia continua.
+> - Se definió un vocabulario de caracteres (`char2idx`, `idx2char`) para tokenizar el texto.
+> - El corpus se convirtió en una secuencia de enteros representando cada carácter.
+> - Se dividió el conjunto en entrenamiento y validación, definiendo un tamaño de contexto para generar secuencias.
+
+#### Arquitectura del modelo
+
+> - Se construyó un modelo **SimpleRNN** con la siguiente arquitectura:
+>   - Capa `TimeDistributed` con codificación one-hot por carácter.
+>   - Capa `SimpleRNN` con 200 unidades, dropout y recurrent dropout.
+>   - Capa `Dense` final con activación `softmax` para predecir el próximo carácter.
+> - El modelo se compiló con pérdida `sparse_categorical_crossentropy` y optimizador `rmsprop`.
+
+---
+
+#### Callback para Perplejidad
+
+> - Se implementó un **callback personalizado** para calcular la **perplejidad** sobre los datos de validación al final de cada época.
+> - La perplejidad mide la "incertidumbre" del modelo en la predicción del siguiente carácter.
+> - También se usó este callback para aplicar **early stopping** cuando la perplejidad dejaba de mejorar.
+
+#### Entrenamiento
+
+> - El modelo fue entrenado con `batch_size=256` durante hasta 20 épocas.
+> - Se guardó automáticamente el modelo con mejor score de perplejidad.
+
+#### Inferencia interactiva
+
+> - Se cargó el mejor modelo entrenado y se construyó una interfaz con `Gradio` para generar texto.
+> - Dada una secuencia de entrada, el modelo predice el siguiente carácter usando **greedy search**.
+> - Esta herramienta permite probar la capacidad del modelo para continuar textos de forma coherente.
+
+> Este desafío mostró cómo entrenar un modelo de lenguaje a nivel de caracteres utilizando **redes neuronales recurrentes**, evaluando su desempeño con perplejidad y utilizando callbacks personalizados. La tokenización por caracteres permite trabajar con vocabularios reducidos y aprender patrones ortográficos y gramaticales, aunque requiere más pasos para capturar significado a nivel semántico. El uso de una interfaz interactiva facilita la exploración cualitativa de la calidad del modelo.
+
+---
 
 ### 4️ Desafío 4 – Sistema de Pregunta-Respuesta
 > **Tema:** Desarrollo de un sistema QA (*Question Answering*) basado en modelos de lenguaje preentrenados.  
