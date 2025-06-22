@@ -217,54 +217,6 @@ A lo largo de los cuatro desafíos se emplearon múltiples tecnologías del ecos
 
 ---
 
-> Estas herramientas conforman una base integral para abordar tareas avanzadas en NLP, desde clasificación y análisis semántico hasta generación automática de texto.
-## Tecnologías y Herramientas Utilizadas
-
-A lo largo de los cuatro desafíos se emplearon múltiples tecnologías del ecosistema de procesamiento de lenguaje natural (NLP), aprendizaje profundo y visualización de datos. A continuación se listan las principales:
-
-### Bibliotecas y Frameworks
-
-- **Python 3** – Lenguaje principal de desarrollo
-- **NumPy** – Manipulación de arrays y operaciones numéricas
-- **Pandas** – Manejo y estructuración de datos tabulares
-- **Matplotlib / Seaborn / Plotly** – Visualización de resultados y embeddings
-- **Scikit-learn** – Métricas, vectorización (TF-IDF), validación cruzada
-- **Gensim** – Entrenamiento de modelos Word2Vec para embeddings de palabras
-- **TensorFlow / Keras** – Implementación de modelos de redes neuronales:
-  - Modelos secuenciales y funcionales
-  - Capas recurrentes: `SimpleRNN`, `LSTM`, `GRU`
-  - Capas personalizadas (e.g., `AttentionLayer`)
-- **Gradio** – Construcción de interfaces interactivas para modelos NLP
-
-### Procesamiento de Texto
-
-- **TF-IDF (`TfidfVectorizer`)** – Vectorización clásica de texto
-- **Word2Vec (Skip-gram)** – Embeddings entrenados desde cero sobre corpus literario
-- **Embeddings preentrenados (FastText)** – Representaciones vectoriales semánticas externas
-- **Tokenización a nivel de palabra y carácter** – Preparación de datos para modelos de lenguaje
-
-### Modelos de Lenguaje
-
-- **Modelos estadísticos supervisados**:
-  - `MultinomialNB`, `ComplementNB` (Naïve Bayes)
-- **Modelos secuenciales**:
-  - Modelos de lenguaje a nivel de caracteres
-  - Modelos encoder-decoder con atención para generación de texto
-
-###  Evaluación y Métricas
-
-- **F1-score macro** – Evaluación balanceada para clasificación multiclase
-- **Perplejidad** – Métrica de desempeño para modelos de lenguaje
-- **Similaridad del coseno** – Para comparar documentos o palabras vectorizadas
-
-### Datasets
-
-- **20 Newsgroups** – Clasificación de documentos por tema
-- **Martín Fierro (texto literario)** – Entrenamiento de embeddings y modelo de lenguaje
-- **SQuAD v1.1** – Preguntas y respuestas para entrenamiento del bot QA
-
----
-
 ## Sobre la materia
 
 La materia **Procesamiento de Lenguaje Natural (PLN)** aborda técnicas, modelos y algoritmos para permitir que las máquinas comprendan, interpreten y generen lenguaje humano. Se estudian desde métodos estadísticos clásicos hasta modelos de aprendizaje profundo basados en redes neuronales.
