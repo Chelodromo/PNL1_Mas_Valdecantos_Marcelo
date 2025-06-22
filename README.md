@@ -111,9 +111,62 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 
 ---
 
-### 4️ Desafío 4 – Sistema de Pregunta-Respuesta
-> **Tema:** Desarrollo de un sistema QA (*Question Answering*) basado en modelos de lenguaje preentrenados.  
-> Se trabaja con técnicas avanzadas de representación contextualizada para responder preguntas sobre un corpus específico.
+### Desafío 4 – Bot de Preguntas y Respuestas con Atención
+
+> **Tema:** Construcción de un sistema de generación de respuestas (Bot QA) basado en una arquitectura encoder-decoder con atención, entrenado sobre el dataset SQuAD. Se integran embeddings preentrenados y técnicas de inferencia como muestreo con temperatura.
+
+#### Implementación de la Capa de Atención
+
+> - Se definió una clase personalizada `AttentionLayer` que calcula un **vector de contexto ponderado** a partir de la salida del encoder y la del decoder.
+> - Esta capa permite que el decoder **enfoque diferentes partes del input** durante la generación de cada palabra de la respuesta.
+
+#### Preparación del dataset
+
+> - Se utilizó el dataset **SQuAD v1.1**, del cual se extrajeron 10.000 pares (pregunta, respuesta) con longitud limitada para facilitar el entrenamiento inicial.
+> - Se añadieron tokens especiales `<sos>` y `<eos>` a las respuestas.
+> - Se utilizó `Tokenizer` y `pad_sequences` para convertir los textos a secuencias y preparar los datos de entrada y salida para el modelo.
+
+#### Uso de embeddings preentrenados
+
+> - Se cargaron embeddings **FastText** (300 dimensiones) para enriquecer la representación semántica de palabras.
+> - Se construyó una `embedding_matrix` alineada con el vocabulario del dataset.
+> - Se probaron embeddings fijos y entrenables en distintas versiones del modelo.
+
+#### Arquitectura del modelo
+
+> - Encoder: `Embedding` → `Bidirectional LSTM`
+> - Decoder: `Embedding` → `LSTM`
+> - Atención: se aplicó sobre las salidas del encoder y decoder.
+> - Salida: capa `Dense` con `softmax` aplicada a cada paso temporal.
+> - Se entrenó el modelo con `sparse_categorical_crossentropy` y `adam`.
+
+#### Entrenamiento
+
+> - El modelo fue entrenado con `batch_size=64` por hasta 200 épocas, con validación y visualización de precisión.
+> - Se guardaron pesos del modelo y se reusaron para inferencia si ya existían.
+
+#### Inferencia y generación de respuestas
+
+> - Se redefinieron modelos separados para **inferencia del encoder y decoder**.
+> - Se implementó una función `generate_answer` que genera respuestas mediante:
+>   - Tokenización y padding de la pregunta.
+>   - Paso por el encoder.
+>   - Generación palabra a palabra con el decoder.
+>   - **Muestreo estocástico controlado por temperatura**, que permite explorar variabilidad en las respuestas.
+
+> Ejemplo de generación:
+> ```python
+> print(generate_answer("Do you read?", temperature=1.2))
+> print(generate_answer("Where are you from?", temperature=1.0))
+> print(generate_answer("Do you have any pet?", temperature=0.8))
+> ```
+
+> --> Este desafío integró varios componentes clave de los modelos modernos de NLP:
+> - La arquitectura **encoder-decoder con atención**, que mejora la calidad de las secuencias generadas al enfocarse en partes relevantes del input.
+> - El uso de **embeddings preentrenados** que aportan conocimiento semántico previo.
+> - La capacidad de generar texto de manera controlada mediante estrategias como **muestreo con temperatura**, que permiten balancear coherencia y creatividad.
+> 
+> En conjunto, se construyó una base sólida para modelos de diálogo y generación de texto más avanzados.
 
 ---
 
