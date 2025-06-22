@@ -32,7 +32,7 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 >     - Se eligen 5 palabras específicas y comprensibles, en lugar de aleatorias, para evitar términos irrelevantes o muy             poco frecuentes.
 >     - Calculamos la similaridad del coseno entre palabras para identificar aquellas que comparten un contexto de uso                similar.
 > 
-> --> Este enfoque demostró que es posible descubrir relaciones semánticas relevantes entre palabras, basadas en su coaparición en contextos similares. Además, al seleccionar palabras manualmente y comprensibles, se facilitó una interpretación significativa de los resultados.
+> **-->** Este enfoque demostró que es posible descubrir relaciones semánticas relevantes entre palabras, basadas en su coaparición en contextos similares. Además, al seleccionar palabras manualmente y comprensibles, se facilitó una interpretación significativa de los resultados.
 
 --- 
 
@@ -64,7 +64,7 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 > - Se aplicó **TSNE** para reducir la dimensionalidad a 2D.
 > - Se graficaron los **200 vectores más frecuentes** con `plotly`, observando agrupaciones temáticas y semánticas.
 
-> --> Este desafío demostró cómo entrenar embeddings desde cero sobre un corpus literario permite capturar **relaciones contextuales profundas entre palabras**. A diferencia de métodos basados en frecuencia como TF-IDF, Word2Vec genera representaciones que reflejan **la estructura semántica del lenguaje**, lo que habilita tareas de análisis léxico, descubrimiento de sinónimos y visualización de agrupamientos conceptuales.
+> **-->** Este desafío demostró cómo entrenar embeddings desde cero sobre un corpus literario permite capturar **relaciones contextuales profundas entre palabras**. A diferencia de métodos basados en frecuencia como TF-IDF, Word2Vec genera representaciones que reflejan **la estructura semántica del lenguaje**, lo que habilita tareas de análisis léxico, descubrimiento de sinónimos y visualización de agrupamientos conceptuales.
 
 --- 
 
@@ -107,7 +107,7 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 > - Dada una secuencia de entrada, el modelo predice el siguiente carácter usando **greedy search**.
 > - Esta herramienta permite probar la capacidad del modelo para continuar textos de forma coherente.
 
-> --> Este desafío mostró cómo entrenar un modelo de lenguaje a nivel de caracteres utilizando **redes neuronales recurrentes**, evaluando su desempeño con perplejidad y utilizando callbacks personalizados. La tokenización por caracteres permite trabajar con vocabularios reducidos y aprender patrones ortográficos y gramaticales, aunque requiere más pasos para capturar significado a nivel semántico. El uso de una interfaz interactiva facilita la exploración cualitativa de la calidad del modelo.
+>  **-->** Este desafío mostró cómo entrenar un modelo de lenguaje a nivel de caracteres utilizando **redes neuronales recurrentes**, evaluando su desempeño con perplejidad y utilizando callbacks personalizados. La tokenización por caracteres permite trabajar con vocabularios reducidos y aprender patrones ortográficos y gramaticales, aunque requiere más pasos para capturar significado a nivel semántico. El uso de una interfaz interactiva facilita la exploración cualitativa de la calidad del modelo.
 
 ---
 
