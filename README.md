@@ -39,7 +39,6 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 
 > **Tema:** Crear vectores de palabras utilizando **Gensim** y el modelo **Word2Vec**, entrenado sobre un corpus propio (el poema *Martín Fierro*). Se analizan relaciones semánticas entre términos y se visualiza su organización en el espacio de embeddings.
 
----
 
 #### Preparación del corpus
 
