@@ -10,44 +10,26 @@ Este repositorio contiene el desarrollo de los **Desafíos** realizados en el ma
 
 ## Contenido del repositorio
 
-### Desafío 1 – Vectorización y Clasificación de Textos
+### 1️ Desafío 1 – Vectorización y Clasificación de Textos
 
-**Tema:**  
-Análisis del dataset *20 Newsgroups*, utilizando técnicas de vectorización con **TF-IDF**, clasificación con modelos de **Naïve Bayes**, y estudio de **similaridad entre documentos**.
+> **Tema:** Dataset *20 Newsgroups*, vectorización con **TF-IDF**, clasificación con **Naïve Bayes** y análisis de similaridad entre documentos.
 
----
+> - Vectorizamos con **TF-IDF** todo el corpus porque ayuda a destacar palabras que son importantes en un documento pero no comunes en todos, luego elegimos al azar 5 documentos.
 
-#### Vectorización y Similaridad
+> - Implementamos el concepto de **"cosine similarity"**, que mide qué tan similares son dos vectores en términos de su ángulo para encontrar los 5 documentos más similares.
 
-- Se vectorizó todo el corpus con **TF-IDF** porque permite destacar palabras importantes dentro de cada documento, restando relevancia a términos comunes en todos los textos.
-- A partir del corpus, se eligieron al azar **5 documentos** y se implementó el cálculo de **similaridad del coseno** (*cosine similarity*) para identificar los **5 documentos más similares** a cada uno de ellos.
-- La similaridad del coseno evalúa el **ángulo entre vectores**, interpretando cuán alineadas están sus representaciones en el espacio vectorial.
+> - Exploramos:
+>   - Distintos modelos de **Naïve Bayes**:
+>     - `MultinomialNB` (bueno para textos en general)
+>     - `ComplementNB` (mejor en conjuntos desbalanceados)
+>   - Distintas configuraciones del vectorizador `TfidfVectorizer`:
+>     - Variaciones en `ngram_range`, `min_df` y `stop_words`.
+>   - Para encontrar la mejor combinación que capte mejor el contenido del texto.
 
----
+> - Finalmente, se explora el impacto de distintas representaciones vectoriales sobre el rendimiento del modelo.
 
-#### 🔹 Exploración de Modelos de Clasificación
 
-Se exploraron múltiples configuraciones para optimizar el desempeño del modelo (F1-score macro):
-
-1. **Modelos Naïve Bayes:**
-   - `MultinomialNB`: adecuado para clasificación de texto en general.
-   - `ComplementNB`: diseñado para manejar mejor datasets con clases desbalanceadas.
-
-2. **Parámetros de vectorización (`TfidfVectorizer`):**
-   - `ngram_range`: para incluir unigramas, bigramas y trigramas.
-   - `min_df`: para filtrar términos poco frecuentes.
-   - `stop_words`: para eliminar palabras comunes irrelevantes (e.g., en inglés).
-
-3. **Evaluación y comparación:**
-   - Se midió el rendimiento con **F1-score macro**, que considera el equilibrio de desempeño entre todas las clases.
-   - Se identificó la **mejor combinación de modelo y vectorización** que logra captar mejor el contenido del texto y optimiza la clasificación.
-
----
-
-#### ✅ Conclusión
-
-Este desafío permite observar el impacto de distintas representaciones vectoriales y parámetros de modelos sobre el rendimiento de clasificación en texto. Combinar múltiples configuraciones ayuda a seleccionar la opción más eficaz para capturar patrones semánticos y estructurales del corpus.
-
+--- 
 
 ### 2️ Desafío 2 – Clasificación de Sentimientos
 > **Tema:** Análisis de sentimientos en reseñas de películas.  
