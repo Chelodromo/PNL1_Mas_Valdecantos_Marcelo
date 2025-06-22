@@ -265,24 +265,9 @@ A lo largo de los cuatro desafíos se emplearon múltiples tecnologías del ecos
 
 ---
 
-> Estas herramientas conforman una base integral para abordar tareas avanzadas en NLP, desde clasificación y análisis semántico hasta generación automática de texto.
-
-
----
-
 ## Sobre la materia
 
 La materia **Procesamiento de Lenguaje Natural (PLN)** aborda técnicas, modelos y algoritmos para permitir que las máquinas comprendan, interpreten y generen lenguaje humano. Se estudian desde métodos estadísticos clásicos hasta modelos de aprendizaje profundo basados en redes neuronales.
-
----
-
-##  Recursos complementarios
-
-- [Documentación de Scikit-learn](https://scikit-learn.org/stable/)
-- [Guía de NLP de Hugging Face](https://huggingface.co/course/chapter1)
-- [Curso de PLN de Stanford (CS224n)](http://web.stanford.edu/class/cs224n/)
-
----
 
 ---
 
@@ -299,9 +284,10 @@ La materia **Procesamiento de Lenguaje Natural (PLN)** aborda técnicas, modelos
 
 ## Resumen de Resultados y Aprendizajes
 
-- Se aplicaron diversas técnicas de preprocesamiento de texto, vectorización y clasificación, lo que permitió comparar enfoques clásicos y modernos en PLN.
-- Se experimentó con **modelos supervisados**, **similaridad semántica** y **modelos de lenguaje preentrenados**.
-- Se adquirieron habilidades prácticas para construir pipelines de procesamiento de texto, incluyendo tareas de clasificación, análisis de sentimientos y QA.
+- Se abordaron tareas clave de NLP mediante clasificación de texto, análisis de similaridad, generación de lenguaje y sistemas de QA con atención.
+- Se experimentó con modelos estadísticos (Naïve Bayes), embeddings propios (Word2Vec) y redes neuronales recurrentes con arquitectura encoder-decoder.
+- Se fortalecieron habilidades en preprocesamiento, diseño de modelos, evaluación con métricas específicas y visualización de representaciones semánticas.
+
 
 ---
 
